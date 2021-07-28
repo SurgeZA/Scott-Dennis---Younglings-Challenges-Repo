@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+    <!-- <link rel="stylesheet" href="/Edu-Care-Contact-Backend/contactus.css"> -->
+    <script src="https://kit.fontawesome.com/6f7393ddf1.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    * {
+           margin: 0;
+           padding: 0;
+           /* box-sizing: border-box; */
+           font-family: sans-serif;
+   
+       }
+       @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+   *{
+       font-family: sans-serif;
+       padding: 0;
+       margin: 0;
+   
+   }
+   
+   html{
+       height:119vh;
+       background: url(support.jpg) no-repeat;
+   }
+   
+   .wrapper{
+       /* background: url(bg-img.jpg) no-repeat; */
+       background-size: cover;
+       height: 95vh;
+   }
+   
+   .navbar{
+       height: 95px;
+       width: 100%;
+       background: rgba(0, 0, 0, 0.493);
+   }
+   
+   .logo{
+       width: 200px;
+       height: auto;
+       padding: 20px 100px;
+       font-size: 35px;
+       color: white;
+       float: left;
+   }
+   .navbar ul{
+       float: right;
+       margin-right: 20px ;
+   }
+   .navbar ul li{
+       list-style: none;
+       margin: 0 8px;
+       display: inline-block;
+       line-height: 90px;
+   }
+   .navbar ul li a{
+       text-decoration: none;
+       color: white;
+       font-size: 20px;
+       padding: 10px 13px;
+       font-family: "Roboto", sans-serif;
+       transition: .4s;
+   }
+   
+   .navbar ul li a.active,
+   .navbar ul li a:hover{
+       background: #c00 ;
+       border-radius: 2px;
+       border-color: rgb(255, 255, 255);
+   }
+   
+   
+   
+       .contact
+       {
+           
+           background: url(/support.jpg) no-repeat;
+           position: relative;
+           min-height: 100vh;
+           padding: 50px 100px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           background-image:url(support.jpg);
+           background-size: cover;
+       }
+       .contact .content
+       {max-width: 800px;
+       text-align: center;
+       }
+       .contact .content h2
+       {
+         font-size: 36px;
+         font-weight: 500;
+         color: red;
+       }
+       .contact .content p
+        {
+           font-weight: 500;
+           color:rgb(0, 0, 0);
+       }
+       .container
+       {
+           width: 100%;
+           display: flex;
+           justify-content: centre;
+           align-items: center;
+           margin-top:30px;
+       
+       }
+       .container .contactInfo
+       {
+           width: 50%;
+           display: flex;
+           flex-direction: column;
+       }
+       .container .contactInfo .box
+       {
+           position: relative;
+           padding:  20px 0;
+           display: flex;
+       }
+       .container .contactInfo .box .icon
+       {
+           min-width: 60px;
+           height: 60px;
+           background: rgb(255, 255, 255);
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           border-radius: 50%;
+           font-size:22px;
+       }
+       .container .contactInfo .box .text
+       {
+           display: flex;
+           margin-left:20px;
+           font-size:16px;
+           color:rgb(0, 0, 0);
+           flex-direction:column;
+           font-weight:300;
+       }
+       .container .contactInfo .box .text h3
+       {
+           font-weight: 500;
+           color: #ce1635;
+       }
+   
+       .contactForm
+       {
+           width: 40%;
+           padding:40px;
+           background: rgb(255, 255, 255);
+       }
+   
+       .contactForm h2 
+       {
+           font-size: 30px;
+           color:rgb(0, 0, 0);
+           font-weight: 500;
+       }
+   
+   .contactForm .inputBox 
+   {
+       position: relative;
+       width: 100%;
+       margin-top: 10px;
+   }
+   .contactForm .inputBox input, 
+   .contactForm .inputBox textarea
+   {
+       width: 100%;
+       padding: 5px 0;
+       font-size: 16px;
+       margin: 10px 0;
+       border: none;
+       border-bottom: 2px solid #333;
+       outline: none;
+       resize: none;
+   }
+    .contactForm .inputBox span
+   {
+       position: absolute;
+       left: 0;
+       padding: 5px 0;
+       font-size: 16px;
+       margin: 10px 0;
+       pointer-events: none;
+       transition: 0.5s;
+       color:rgb(0, 0, 0);
+   }
+   
+   .contactForm .inputBox input:focus ~ span,
+   .contactForm .inputBox input:valid ~ span,
+   .contactForm .inputBox textarea:focus ~ span,
+   .contactForm .inputBox textarea:valid ~ span
+   {
+       color: #e91e63;
+       font-size: 12px;
+       transform: translateY(-20px);
+       }
+   .contactForm .inputBox input[type="submit"] 
+   {
+       width: 100px;
+       background: #e02323;
+       color: rgb(0, 0, 0);
+       border: none;
+       cursor: pointer;
+       padding: 10px;
+       font-size: 18px;
+   }
+   
+   @media  (max-width: 991px)
+   {
+       .contact
+       {
+           padding: 50px;
+       }
+       .container
+       {
+           flex-direction: column;
+       } 
+       .container .contactInfo
+       {
+           margin-bottom: 40px;
+       }
+       .container .contactInfo,
+       .contactForm
+       {
+           width: 100%;
+   
+       }
+   }
+   
+   /* Footer */
+   *{
+       margin: 0;
+       padding: 0;
+       /* box-sizing: border-box; */
+       font-family: 'Poppins', sans-serif;
+   }
+   
+   /* body{
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+       min-height: 100vh;
+       flex-direction: column;
+       background: #ede7f6;
+   } */
+   
+   footer{
+       position: relative;
+       width: 100%;
+       height: auto;
+       padding: 50px 100px;
+       background: #111;
+       justify-content: space-between;
+       flex-wrap: wrap;
+   }
+   footer .section{
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+       flex-direction: row;
+   }
+   footer .section .sec{
+       margin-right: 30px;
+   }
+   footer .section .sec.aboutus{
+       width: 40%;
+   }
+   footer .section h2{
+       position: relative;
+       color: #fff;
+       font-weight: 500;
+       margin-bottom: 15px;
+   
+   }
+   
+   footer .section h2::before{
+       content: '';
+       position: absolute;
+       bottom: -5px;
+       left: 0;
+       width: 50px;
+       height: 2px;
+       background: #f00;
+   }
+   
+   footer .section .sec.aboutus p{
+       color: #999;
+   }
+   
+   .sci{
+       margin-top: 20px;
+       display: flex;
+   }
+   
+   .sci li{
+       list-style: none;
+   }
+   
+   .sci li a {
+       display: inline-block;
+       width: 40px;
+       height: 40px;
+       background: #222;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-right: 10px;
+       text-decoration: none;
+       border-radius: 4px;
+   }
+   .sci li a:hover{
+       background: #f00;
+   }
+   .sci li a .fab{
+       color:#fff;
+       font-size: 20px;
+   }
+   
+   .quickLinks{
+       position: relative;
+       width: 25%;
+   }
+   
+   .quickLinks ul li{
+       list-style: none;
+   }
+   
+   .quickLinks ul li a{
+       color: #999;
+       text-decoration: none;
+       margin-bottom: 10px;
+       display: inline-block;
+   }
+   
+   .quickLinks ul li a:hover{
+       color: #fff;
+   }
+   
+   .touch{
+       width: calc(35% - 60px);
+       margin-right: 0! important;
+   }
+   
+   .touch .info{
+       position: relative;
+   }
+   
+   .touch .info li{
+       display: flex;
+       margin-bottom: 16px;
+   }
+   
+   .touch .info li span:nth-child(1){
+       color: #fff;
+       font-size: 20px;
+       margin-right: 10px;
+   
+   }
+   
+   .touch .info li span{
+       color: #999;
+   }
+   
+   .touch .info li a{
+   color: #999;
+   text-decoration: none;
+   }
+   
+   .touch .info li a:hover{
+       color: #fff;
+   }
+   .copyrightText{
+       width: 100%;
+       background: #181818;
+       padding: 8px 100px;
+       text-align: center ;
+       color: #999;
+   }
+   @media (max-width: 991px)
+   {
+       footer{
+           padding: 40px;
+       }
+   
+       footer .section
+       {
+           flex-direction: column;
+       }
+       footer .section .sec {
+           margin-right: 0;
+           margin-bottom: 40px;
+       }
+       footer .section .sec.aboutus, .quickLinks, .touch{
+           width:100%;
+       }
+       .copyrightText{
+           padding: 8px 40px;
+       }
+   }
+   </style>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="wrapper">
+        <nav class="navbar">
+        <div class="logo" src="logo.png">EDU-CARE</div>
+        
+            <ul>
+                <li><a  href="/home.html">Home</a></li>
+                <li><a href="/aboutus.html">About</a></li>
+                <li><a href="/donations.html">Get Involved</a></li>
+                <li><a href="/events.html">News/Events</a></li>
+                <li><a class="active" href="/views/index.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <section class="contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>If you have any queries,let us know and get in touch.</p>
+            </div>
+            <div class="container">
+                <!-- <img src="/support.jpg" alt="rome"> -->
+                <div class="contactInfo">
+                    <div class= "box">
+                        <div class= "icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>ABSA Youngligns,<br> Cape Town,<br>7777</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                         <div class="text">
+                       <h3>Phone</h3>
+                       <p>007 420 6969</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                       <h3>Email</h3>
+                       <p>scott.dennis@younglings.africa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" id="name" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" id="email" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                       <textarea required="required" id="text"></textarea>
+                        <span>Type Your Message...</span>
+                    </div>            
+                    <div class="inputBox">
+                        <input type="submit"  name="" value="Submit"> <!-- Send -->
+                        <script src="https://www.google.com/recaptcha/api.js?render=6LeUVu0aAAAAAJN-y7OPwZict3msn6zwtGy1ABqR%22%3E"></script>
+                        <div class="g-recaptcha" data-sitekey="6LclHPgaAAAAAAaxkyt0MFmB0GGPRJfdF4HTJSpa"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+     </section>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script>
+     //TODO:
+     $('form').on('submit', (e) => {
+         e.preventDefault();
+
+         const email = $('#email').val().trim();
+         const name = $('#name').val().trim(); 
+         const text = $('#text').val().trim();
+
+         const data = {
+             email,
+             name, 
+             text
+         };
+
+         $.post('/email',data, function() {
+             console.log('Server received our data');
+         });     
+
+
+     });;
+ </script>
+
+<!-- FOOTER -->
+
+ <footer>
+    <div class="section">
+        <div class="sec aboutus">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maiores a labore ipsum culpa modi, odit quae consectetur illum esse voluptate nostrum porro qui odio, libero commodi similique natus totam!</p>
+            <ul class="sci">
+                <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+            </ul>
+        
+        </div>
+        <div class="sec quickLinks">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="events.html">News/Events</a></li>
+                <li><a href="#">Help Out</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+         </div>
+         <!-- <div class="sec touch">
+             <h2>Contact Info</h2>
+             <ul class="info">
+                 <li>
+                     <span><i class="fas fa-map-marker-alt"></i></span>
+                     <span>Younglings<br>
+                    Cape Town <br> South Africa</span>
+                 </li>
+                 <li>
+                    <span><i class="fas fa-phone"></i></span>
+                    <p><a href="tel:007 420 6969">007 420 6969</a><br></p>
+                </li>
+                <li>
+                    <span><i class="fas fa-envelope"></i></span>
+                    <p>,<a href="mail.to:scott.dennis@younglings.africa">scott.dennis@younglings.africa</a></p>
+                </li>
+             </ul>
+         </div> -->
+
+    </div>
+</footer>
+<div class="copyrightText">
+    <p>Copyright © 2021 Scott Dennis. All Rights Reserved.</p>
+</div>
+</body>
+</html>
